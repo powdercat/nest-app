@@ -4,10 +4,12 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import entities from './typeorm';
 import { UsersModule } from './users/users.module';
+import { AuthsModule } from './auths/auths.module';
 
 @Module({
   imports: [
     UsersModule,
+    AuthsModule,
     TypeOrmModule.forRoot({
       type: process.env.DB_TYPE as any,
       host: process.env.DB_HOST as string,
